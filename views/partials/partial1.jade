@@ -1,0 +1,40 @@
+.row
+	.col-lg-12.table
+		.header
+			img(src="imgs/header.png")
+		table(ng-hide="editModeOn")
+			tr
+				th.center sillonista
+				th.center pj
+				th.center pts.
+			tr(ng-repeat="player in players")
+				td.player-data
+					img.player-image(src="{{player.img}}")
+					div.player-name {{player.name}}
+				td.center
+					div {{player.pj}}
+				td.center
+					div {{player.pts}}
+			tr
+		table(ng-show="editModeOn")
+			tr
+				th.center sillonista
+				th.center pj
+				th.center pts.
+			tr(ng-repeat="player in players")
+				td.player-data
+					img.player-image(src='{{player.img}}')
+					input(type="file", ng-model="player.img")
+					div.player-name 
+						input(type="text",ng-model='player.name')
+				td.center
+					div
+						input(type="text", ng-model='player.pj')
+				td.center
+					div
+						input(type="text", ng-model='player.pts')
+			tr
+		div
+			button(ng-click="editModeOn=true", ng-hide="editModeOn") editar 
+			button(ng-click="addPlayer()", ng-show="editModeOn") nuevo jugador
+			button(ng-click="editModeOn=false", ng-show="editModeOn") cerrar

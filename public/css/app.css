@@ -1,0 +1,55 @@
+/* app css stylesheet */
+
+body {
+  padding-top:70px;
+  background-image: url('../imgs/bg.png');
+}
+
+table {
+	width: 100%;
+	margin-top: 15px;
+}
+
+table tr th, table tr td {
+	height: 72px;
+	border: 3px solid #0cd4a3; /*verde*/
+}
+
+table tr th {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+table tr td {
+	padding-left: 25px;
+}
+
+.header {
+	color: #003a4e; /*azul*/
+}
+
+.header img {
+	width: 100%;
+}
+
+.table {
+	color: #0cd4a3; /*verde*/
+	font-family: sans-serif, arial;
+	font-size: 16px;
+}
+
+.center	{
+	text-align: center;
+	padding: 0px;
+}
+
+.player-data .player-image, .player-data .player-name {
+	float: left;
+}
+
+.player-data .player-image {
+	max-height: 60px;
+}
+.player-data .player-name {
+	padding: 20px;
+}
