@@ -56,9 +56,29 @@ table tr td {
 	padding: 20px;
 }
 
+.player-image-container {
+	height: 60px;
+}
+
 .btnsContainer {
+	margin-top: 10px;
 	min-height: 40px;
 	width: 100%;
+}
+
+.btnsContainer button, input {
+	background: transparent;
+	border-radius: 3px;
+	border: 3px solid #0cd4a3; /*verde*/
+	color: #0cd4a3; /*azul*/
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 10px;
+	box-shadow: none;
+}
+
+input[type=file] {
+	border:none;
 }
 
 .btnEdit {
