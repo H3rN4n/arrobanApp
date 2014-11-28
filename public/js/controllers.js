@@ -3,24 +3,31 @@
 /* Controllers */
 
 function AppCtrl($scope, $http) {
-  $http({method: 'GET', url: '/api/name'}).
-  success(function(data, status, headers, config) {
-    $scope.name = data.name;
-  }).
-  error(function(data, status, headers, config) {
-    $scope.name = 'Error!';
-  });
+	$http({method: 'GET', url: '/api/name'}).
+		success(function(data, status, headers, config) {
+		$scope.name = data.name;
+	}).
+		error(function(data, status, headers, config) {
+		$scope.name = 'Error!';
+	});
 
-  $scope.addPlayer = function(){
-	var newPlayer = {
-						name: "PEPE1",
-						img: "imgs/foto-elalesi.png",
-						pj: 2,
-						pts: 10
-					};
+	$scope.readMethod = "readAsDataURL";
 
-	$scope.players.push(newPlayer);
-  };
+	$scope.addPlayer = function(){
+		var newPlayer = {
+			name: "",
+			img: "",
+			pj: 0,
+			pts: 0
+		};
+
+		$scope.players.push(newPlayer);
+	};
+
+	$scope.onReaded = function( e, file ){
+		//console.log(playerIndex);
+		$scope.players[e.playerIndex].img = e.target.result;
+	};
 
   $scope.players = [
 		{
@@ -33,25 +40,25 @@ function AppCtrl($scope, $http) {
 			name: "PEPE1",
 			img: "imgs/foto-elalesi.png",
 			pj: 2,
-			pts: 10
+			pts: 7
 		},
 		{
 			name: "PEPE1",
 			img: "imgs/foto-elalesi.png",
 			pj: 2,
-			pts: 10
+			pts: 20
 		},
 		{
 			name: "PEPE1",
 			img: "imgs/foto-elalesi.png",
 			pj: 2,
-			pts: 10
+			pts: 0
 		},
 		{
 			name: "PEPE1",
 			img: "imgs/foto-elalesi.png",
 			pj: 2,
-			pts: 10
+			pts: 2
 		},
 	];
 }

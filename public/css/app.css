@@ -3,6 +3,7 @@
 body {
   padding-top:70px;
   background-image: url('../imgs/bg.png');
+  background-size: cover;
 }
 
 table {
@@ -49,7 +50,22 @@ table tr td {
 
 .player-data .player-image {
 	max-height: 60px;
+	border-radius: 50%;
 }
 .player-data .player-name {
 	padding: 20px;
 }
+
+.btnsContainer {
+	min-height: 40px;
+	width: 100%;
+}
+
+.btnEdit {
+	visibility: hidden;
+}
+
+.btnsContainer:hover .btnEdit {
+	visibility: visible;
+}
+
