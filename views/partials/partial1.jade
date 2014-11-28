@@ -28,7 +28,9 @@
 				td.player-data
 					div.player-image-container
 						img.player-image(src='{{player.img}}')
-						div(ng-file-reader, on-readed="onReaded( event, file )", player-index="$index", read-method="readMethod")
+						div.fileUpload
+							span Subir Imagen
+							div(ng-file-reader, on-readed="onReaded( event, file )", player-index="$index", read-method="readMethod")
 					div.player-name Nombre: 
 						input(type="text",ng-model='player.name')
 				td.center

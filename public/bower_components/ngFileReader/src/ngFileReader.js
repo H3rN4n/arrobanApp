@@ -81,7 +81,7 @@
         playerIndex:"="
       },
 
-      template:"<input type='file' accept='{{accept}}' />",
+      template:"<input class='upload' type='file' accept='{{accept}}' />",
 
       /**
       * @param {Scope} scope
