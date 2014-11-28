@@ -24,6 +24,10 @@ function AppCtrl($scope, $http) {
 		$scope.players.push(newPlayer);
 	};
 
+	$scope.removePlayer = function(playerIndex){
+		$scope.players.splice(playerIndex, 1);
+	};
+
 	$scope.onReaded = function( e, file ){
 		//console.log(playerIndex);
 		$scope.players[e.playerIndex].img = e.target.result;
@@ -47,19 +51,7 @@ function AppCtrl($scope, $http) {
 			img: "imgs/foto-elalesi.png",
 			pj: 2,
 			pts: 20
-		},
-		{
-			name: "PEPE1",
-			img: "imgs/foto-elalesi.png",
-			pj: 2,
-			pts: 0
-		},
-		{
-			name: "PEPE1",
-			img: "imgs/foto-elalesi.png",
-			pj: 2,
-			pts: 2
-		},
+		}
 	];
 }
 

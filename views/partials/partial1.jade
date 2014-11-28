@@ -23,6 +23,7 @@
 				th.center sillonista
 				th.center pj
 				th.center pts.
+
 			tr(ng-repeat="player in players")
 				td.player-data
 					img.player-image(src='{{player.img}}')
@@ -35,6 +36,9 @@
 				td.center
 					div
 						input(type="number", ng-model='player.pts')
+				td.center
+					div.actions
+						a.removeItem(ng-click="removePlayer($index)") Borrar
 			tr
 		div.btnsContainer
 			button.btnEdit(ng-click="editModeOn=true", ng-hide="editModeOn") Editar 

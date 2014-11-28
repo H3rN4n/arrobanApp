@@ -69,3 +69,7 @@ table tr td {
 	visibility: visible;
 }
 
+.actions a {
+	color: #0cd4a3; /*verde*/
+	cursor: pointer;
+}
