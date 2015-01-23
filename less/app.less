@@ -1,0 +1,100 @@
+body {
+  padding-top:70px;
+  background-image: url('../imgs/bg.png');
+  background-size: cover;
+}
+table {
+  width: 100%;
+  margin-top: 15px;
+  tr {
+    th {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    td {
+      padding-left: 25px;
+    }
+  }
+}
+table tr th, table tr td {
+  height: 72px;
+  border: 3px solid #0cd4a3;
+}
+.header {
+  color: #003a4e;
+  img {
+    width: 100%;
+  }
+}
+.table {
+  color: #0cd4a3;
+  font-family: sans-serif, arial;
+  font-size: 16px;
+}
+.center {
+  text-align: center;
+  padding: 0px;
+}
+.player-data .player-image, .player-data .player-name {
+  float: left;
+}
+.player-data {
+  .player-image {
+    max-height: 60px;
+    border-radius: 50%;
+  }
+  .player-name {
+    padding: 20px;
+  }
+}
+.player-image-container {
+  height: 60px;
+}
+.btnsContainer {
+  margin-top: 10px;
+  min-height: 40px;
+  width: 100%;
+}
+.btnsContainer button, input {
+  background: transparent;
+  border-radius: 3px;
+  border: 3px solid #0cd4a3;
+  color: #0cd4a3;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 10px;
+  box-shadow: none;
+}
+input[type=file] {
+  border:none;
+}
+.btnEdit {
+  visibility: hidden;
+}
+.btnsContainer:hover {
+  .btnEdit {
+    visibility: visible;
+  }
+}
+.actions {
+  a {
+    color: #0cd4a3;
+    cursor: pointer;
+  }
+}
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
