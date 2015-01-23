@@ -46,4 +46,4 @@
 		div.btnsContainer
 			button.btnEdit(ng-click="editModeOn=true", ng-hide="editModeOn") Editar 
 			button(ng-click="addPlayer()", ng-show="editModeOn") Nuevo
-			button(ng-click="editModeOn=false", ng-show="editModeOn") Cerrar
+			button(ng-click="editModeOn=false; saveData();", ng-show="editModeOn") Cerrar

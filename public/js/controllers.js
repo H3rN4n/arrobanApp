@@ -3,13 +3,6 @@
 /* Controllers */
 
 function AppCtrl($scope, $http) {
-	$http({method: 'GET', url: '/api/name'}).
-		success(function(data, status, headers, config) {
-		$scope.name = data.name;
-	}).
-		error(function(data, status, headers, config) {
-		$scope.name = 'Error!';
-	});
 
 	$scope.readMethod = "readAsDataURL";
 
@@ -33,26 +26,24 @@ function AppCtrl($scope, $http) {
 		$scope.players[e.playerIndex].img = e.target.result;
 	};
 
-  $scope.players = [
-		{
-			name: "PEPE1",
-			img: "imgs/foto-elalesi.png",
-			pj: 2,
-			pts: 10
-		},
-		{
-			name: "PEPE1",
-			img: "imgs/foto-elalesi.png",
-			pj: 2,
-			pts: 7
-		},
-		{
-			name: "PEPE1",
-			img: "imgs/foto-elalesi.png",
-			pj: 2,
-			pts: 20
-		}
-	];
+	$scope.saveData = function(){
+		$http({method: 'POST', url: '/api/data', data: $scope.players}).
+			success(function(data) {
+				console.log('Guardado!');
+			}).
+			error(function() {
+				alert('Error!');
+			});
+	};
+
+	$http({method: 'GET', url: '/api/data'}).
+		success(function(data) {
+			console.log(data);
+			$scope.players = data;
+		}).
+		error(function() {
+			alert('Error!');
+		});
 }
 
 function MyCtrl1($scope) {
