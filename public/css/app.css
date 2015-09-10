@@ -13,7 +13,7 @@ table {
 
 table tr th, table tr td {
 	height: 72px;
-	border: 3px solid #0cd4a3; /*verde*/
+	border: 3px solid #000000; /*verde*/
 }
 
 table tr th {
@@ -34,7 +34,7 @@ table tr td {
 }
 
 .table {
-	color: #0cd4a3; /*verde*/
+	color: #ffffff; /*verde*/
 	font-family: sans-serif, arial;
 	font-size: 16px;
 }
@@ -42,6 +42,12 @@ table tr td {
 .center	{
 	text-align: center;
 	padding: 0px;
+	font-size: 17px;
+}
+
+.center:first-child {
+	text-align: left;
+	padding-left: 100px;
 }
 
 .player-data .player-image, .player-data .player-name {
@@ -70,7 +76,7 @@ table tr td {
 	background: transparent;
 	border-radius: 3px;
 	border: 3px solid #0cd4a3; /*verde*/
-	color: #0cd4a3; /*azul*/
+	color: #ffffff; /*azul*/
 	font-size: 16px;
 	margin-right: 10px;
 	padding: 10px;
@@ -90,7 +96,7 @@ input[type=file] {
 }
 
 .actions a {
-	color: #0cd4a3; /*verde*/
+	color: #ffffff; /*verde*/
 	cursor: pointer;
 }
 
